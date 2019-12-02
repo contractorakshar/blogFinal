@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoreBlog</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Include navbar -->
+    <%- include('../components/navbar') %>
+
+    <section class="blog">
+        <div class="container">
+            <div class="blog__img">
+                <img src="/static/images/<%= blog.image %>" alt="">
+            </div>
+            <div class="blog__info">
+                <span><%= blog.user.name %></span>
+                <span><%= blog.date %></span>
+            </div>
+            <div class="blog__content">
+                <%= blog.body %>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CUSTOM JS -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
